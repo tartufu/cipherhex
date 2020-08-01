@@ -77,19 +77,9 @@ function CardGrid() {
                 rowFour.push(twentyCards[i]);
             }
 
-            console.log("asdasdas", cardArray);
-            console.log("game startoooo", twentyCards);
-            console.log("game row oneeeeee", rowOne);
-            console.log("game row twwwoooooo", rowTwo);
-            console.log("game row threeeeeee", rowThree);
-            console.log("game row foooooourrrrrrr", rowFour );
-
             // return response;
 
-            addCards([rowOne, rowTwo, rowThree, rowThree]);
-
-            console.log(cardDeck);
-
+            addCards([rowOne, rowTwo, rowThree, rowFour]);
         }
         cardDeckCreation();
     }, []);
@@ -97,47 +87,40 @@ function CardGrid() {
     if (cardDeck.length !== 0) {
         return(
             <div className="container">
-                <p>asdsadasd</p>
-                <img src={cardDeck[0][0].webformatURL}></img> 
 
-                {/* <div className="columns">
-                    <div className="column">
-                        <button className="button is-large is-primary">asdasd </button>
-                        <img src={cardDeck[0].webformatURL}></img> 
-                    </div>
-
-                    <div className="column">
-                        <button className="button is-large is-primary">asdasd </button>
-                        <img src={cardDeck[1].webformatURL}></img> 
-                    </div>
-
-                    <div className="column">
-                        <button className="button is-large is-primary">asdasd </button>
-                        <img src={cardDeck[2].webformatURL}></img> 
-                    </div>
-
-                    <div className="column">
-                        <button className="button is-large is-primary">asdasd </button>
-                        <img src={cardDeck[3].webformatURL}></img> 
-                    </div>
-
-                    <div className="column">
-                        <button className="button is-large is-primary">asdasd </button>
-                        <img src={cardDeck[4].webformatURL}></img> 
-                    </div>
+                <div className="columns">
+                    { cardDeck[0].map( (card) => (
+                            <div className="column">
+                                <p>hahahahah {card.id}</p>
+                            </div>
+                        ))}
                 </div>
 
                 <div className="columns">
-                    <div className="column">
-                        <button className="button is-large is-primary">asdasd </button>
-                        <img src={cardDeck[2].webformatURL}></img> 
-                    </div>
+                    { cardDeck[1].map( (card) => (
+                            <div className="column">
+                                <p>hahahahah {card.id}</p>
+                            </div>
+                        ))}
+                </div>
 
-                    <div className="column">
-                        <button className="button is-large is-primary">asdasd </button>
-                        <img src={cardDeck[3].webformatURL}></img> 
-                    </div>
-                </div> */}
+                <div className="columns">
+                    { cardDeck[2].map( (card) => (
+                            <div className="column">
+                                <p>hahahahah {card.id}</p>
+                            </div>
+                        ))}
+                </div>
+
+                <div className="columns">
+                    { cardDeck[3].map( (card) => (
+                            <div className="column">
+                                <p>hahahahah {card.id}</p>
+                            </div>
+                        ))}
+                </div>
+
+
             </div>
         )
     } else {
